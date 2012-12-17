@@ -6,14 +6,19 @@ GetContext('MonsterApp.view').MonsterView = Backbone.View.extend({
 
     render: function() {
         this.$el.html('');
-        this._collectionReset();
         return this;
     },
 
     _collectionReset: function() {
         var self = this;
+        self.$el.append(
+            '<select id=\'monsters\'></select>'
+        );
+
         this.collection.each(function(model) {
-            self.$el.append(model.get('name') + '<br/>');
+            self.$('#monsters').append(
+                '<option value=' + model.get('id') + '>'+model.get('name')+'</option>'
+            );
         });
     }
 });

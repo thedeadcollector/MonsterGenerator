@@ -3,6 +3,7 @@ package monstergenerator
 class Monster {
     String name
     String environment
+    String fullText
 
     static constraints = {
     }
@@ -14,6 +15,7 @@ class Monster {
         id column: 'id'
         name column: 'Name'
         environment column: 'Environment'
+        fullText column: 'FullText'
 
     }
 }

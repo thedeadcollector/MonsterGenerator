@@ -5,15 +5,30 @@ import grails.converters.deep.JSON
 class MonsterController {
 
     def index(){
-        //def list = Monster.findAllById(48)
-        //def list = Monster.findAll()
+        def list = Monster.findAll()
+        def result = []
+        list.each {monster ->
+            if (monster){
+                result.add([id:monster.id,
+                        name:monster.name,
+                        environment: monster.environment,
+                        fullText: monster.fullText
+                ])
+            }
+
+        }
+        render result as JSON
+    }
+
+    def findByEnvironment(){
         def list = Monster.findAllByEnvironmentLike('%hills%')
         def result = []
         list.each {monster ->
             if (monster){
                 result.add([id:monster.id,
                         name:monster.name,
-                        environment: monster.environment
+                        environment: monster.environment,
+                        fullText: monster.fullText
                 ])
             }
 
