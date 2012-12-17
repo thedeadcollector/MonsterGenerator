@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-MonsterApp.domain.MonsterCollection = Backbone.Collection.extend({
+GetContext('MonsterApp.domain').MonsterCollection = Backbone.Collection.extend({
 
     url: '/MonsterGenerator/monster'
 })

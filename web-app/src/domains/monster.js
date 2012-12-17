@@ -7,7 +7,7 @@
  */
 
 
-MonsterApp.domain.Monster = Backbone.Model.extend({
+GetContext('MonsterApp.domain').Monster = Backbone.Model.extend({
 
 
 
