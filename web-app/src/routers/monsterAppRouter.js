@@ -2,7 +2,8 @@ GetContext('MonsterApp.router').MonsterAppRouter = Backbone.Router.extend({
 
     routes: {
         '': '_home',
-        'info': '_info'
+        'info': '_info',
+        'filters':'_filters'
     },
 
     _home: function(){
@@ -13,6 +14,13 @@ GetContext('MonsterApp.router').MonsterAppRouter = Backbone.Router.extend({
 
     _info: function() {
         console.log('show info');
+    },
+
+    _filters:function(){
+        var controller = new MonsterApp.controller.MonsterController();
+        this._fetchMonsters();
+        controller.displayMonsterFilters();
+
     },
 
     _fetchMonsters: function() {

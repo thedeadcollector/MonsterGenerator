@@ -7,6 +7,7 @@ modules = {
     }
 
     utils {
+        dependsOn 'core'
         resource url: 'src/utils/applicationUtils.js'
         resource url: 'src/utils/session.js'
     }
@@ -18,6 +19,14 @@ modules = {
         resource url:'src/domains/monsterCollection.js'
         resource url:'src/routers/monsterAppRouter.js'
         resource url:'src/controllers/monsterController.js'
-        resource url:'src/views/monsterView.js'
+        resource url:'src/views/monster/monsterView.js'
+        resource url:'src/views/monster/monsterFilterView.js'
+    }
+
+    monsterTemplates {
+        dependsOn 'utils'
+        resource url: 'src/views/monster/monsterView.tpl', attrs: [type: 'js'], bundle: 'bundle_monsterTemplates'
+        resource url: 'src/views/monster/monsterFilterView.tpl', attrs: [type: 'js'], bundle: 'bundle_monsterTemplates'
+
     }
 }

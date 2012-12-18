@@ -12,7 +12,10 @@ class MonsterController {
                 result.add([id:monster.id,
                         name:monster.name,
                         environment: monster.environment,
-                        fullText: monster.fullText
+                        fullText: monster.fullText,
+                        challengeRating: monster.challengeRating,
+                        type: monster.type,
+                        subType: monster.subType
                 ])
             }
 
