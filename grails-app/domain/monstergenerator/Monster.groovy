@@ -10,6 +10,7 @@ class Monster {
 
     static mapping = {
         version false
+        sort 'name'
 
         table 'Monsters'
         id column: 'id'
