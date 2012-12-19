@@ -439,11 +439,11 @@ a:focus {
 ul#menu {
     width:80%;
     height:102px;
-    background:url(bg.png) repeat-x;
+    background:url(../images/bg.png) repeat-x;
     list-style:none;
     margin:0;
     padding:0;
-    padding-top:20px;
+    padding-top:0px;
     padding-left:20%;
 }
 
@@ -454,7 +454,7 @@ ul#menu li {
 
 /* Link - common attributes */
 ul#menu li a {
-    background:url(sprite.png) no-repeat scroll top left;
+    background:url(../images/menu.png) no-repeat scroll top left;
     display:block;
     height:81px;
     position:relative;
@@ -473,7 +473,7 @@ ul#menu li a.filters {
 
 /* Span (on hover) - common attributes */
 ul#menu li a span {
-    background:url(sprite.png) no-repeat scroll bottom left;
+    background:url(../images/menu.png) no-repeat scroll bottom left;
     display:block;
     position:absolute;
     top:0;
