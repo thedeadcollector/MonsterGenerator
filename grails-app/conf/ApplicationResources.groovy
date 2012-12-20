@@ -14,6 +14,9 @@ modules = {
 
     monsterCore {
         dependsOn 'core, utils'
+        resource url:'css/main.css'
+        resource url:'css/mobile.css'
+        resource url:'css/statBlocks.css'
         resource url:'src/apps/monsterApp.js'
         resource url:'src/domains/monster.js'
         resource url:'src/domains/monsterCollection.js'
