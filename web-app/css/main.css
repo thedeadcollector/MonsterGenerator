@@ -489,12 +489,12 @@ ul#menu li a span:hover {
 }
 
 /* Shift background position on hover for the class: "home" */
-ul#menu li a.home span {
+ul#menu li a.home:hover {
     background-position:0px -81px;
 }
 
 /* Shift background position on hover for the class: "portfolio" */
-ul#menu li a.filters span {
+ul#menu li a.filters:hover {
     background-position:-159px -81px;
 }
 

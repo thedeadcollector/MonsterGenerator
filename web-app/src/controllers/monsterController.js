@@ -4,11 +4,13 @@ GetContext('MonsterApp.controller').MonsterController = Backbone.Model.extend({
     },
 
     displayMonsters: function() {
+        $('body').empty();
         var view = new MonsterApp.view.monster.MonsterView({collection: MonsterApp.session.get('monsterCollection')});
         $('body').append(view.render().el);
     },
 
     displayMonsterFilters: function() {
+        $('body').empty();
         var view = new MonsterApp.view.monster.MonsterFilterView({collection: MonsterApp.session.get('monsterCollection')});
         $('body').append(view.render().el);
     },

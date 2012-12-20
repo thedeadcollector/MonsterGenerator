@@ -15,15 +15,13 @@ GetContext('MonsterApp.view.monster').MonsterView = Backbone.View.extend({
     },
 
     render: function() {
+        this.$el.html('');
         this.$el.html(this.template());
         return this;
     },
 
     _collectionReset: function() {
         var self = this;
-//        self.$el.append(
-//            '<select id=\'monsters\'></select>' + '<div id=\'info\'></div>'
-        //);
 
         this.collection.each(function(model) {
             self.$('#monsters').append(
@@ -43,4 +41,5 @@ GetContext('MonsterApp.view.monster').MonsterView = Backbone.View.extend({
 
         self.$('#info').html(monster.get('fullText'));
     }
+
 });

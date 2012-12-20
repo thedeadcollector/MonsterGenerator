@@ -2,6 +2,7 @@ GetContext('MonsterApp.router').MonsterAppRouter = Backbone.Router.extend({
 
     routes: {
         '': '_home',
+        'home': '_home',
         'info': '_info',
         'filters':'_filters'
     },
