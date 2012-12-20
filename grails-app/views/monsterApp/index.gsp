@@ -11,7 +11,9 @@
 <head>
     <meta content="main" name="layout"/>
   <title></title>
+    <r:require module="monsterTemplates"/>
     <r:require module="monsterCore"/>
+
 </head>
 <body>
 Hello

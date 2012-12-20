@@ -13,9 +13,13 @@ environments {
     development {
         dataSource {
 //            jdbc:sqlserver://onlinepm4-sql.ident.com\gryphon_dev;database=Gryphon
-            url = "jdbc:sqlserver://opdbsql-dev.ident.com\\opddev2;database=GryphonJason"
-            username = "GryphonApp"
-            password = "letmein"
+//            url = "jdbc:sqlserver://opdbsql-dev.ident.com\\opddev2;database=GryphonJason"
+//            username = "GryphonApp"
+//            password = "letmein"
+
+            url = "jdbc:sqlserver://localhost:1433;databaseName=Starfall"
+            username = "bender"
+            password = "bender"
         }
     }
     test {
