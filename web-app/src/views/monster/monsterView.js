@@ -11,7 +11,7 @@ GetContext('MonsterApp.view.monster').MonsterView = Backbone.View.extend({
         }
 
         this.collection.on('reset', this._collectionReset, this);
-        $('head').append('<link rel="stylesheet" href="/MonsterGenerator/static/css/statBlocks.css" type="text/css" />');
+//        $('head').append('<link rel="stylesheet" href="/MonsterGenerator/static/css/statBlocks.css" type="text/css" />');
     },
 
     render: function() {
