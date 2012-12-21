@@ -3,6 +3,7 @@ modules = {
         resource url:'js/3rdParty/jquery-1.8.3.js'
         resource url: 'js/3rdParty/underscore-min.js'
         resource url: 'js/3rdParty/backbone.js'
+        resource url: 'js/3rdParty/jquery.listnav-2.1.js'
 
     }
 
@@ -17,6 +18,7 @@ modules = {
         resource url:'css/main.css'
         resource url:'css/mobile.css'
         resource url:'css/statBlocks.css'
+        resource url:'css/listnav.css'
         resource url:'src/apps/monsterApp.js'
         resource url:'src/domains/monster.js'
         resource url:'src/domains/monsterCollection.js'

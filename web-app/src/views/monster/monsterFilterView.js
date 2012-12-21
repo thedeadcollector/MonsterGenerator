@@ -2,6 +2,10 @@ GetContext('MonsterApp.view.monster').MonsterFilterView = Backbone.View.extend({
 
     _filterListEnum: undefined,
 
+    events:{
+        'change #filters':'_onFilterOptionChange'
+    },
+
     initialize: function() {
 
         if (!this.constructor.prototype.template) {
@@ -27,6 +31,12 @@ GetContext('MonsterApp.view.monster').MonsterFilterView = Backbone.View.extend({
 
     _collectionReset: function() {
         var self = this;
+
+        this.collection.each(function(model) {
+            self.$('#filteredList').append(
+                '<li value=' + model.get('id') + '>'+model.get('name')+'</li>'
+            );
+        });
     },
 
     _fillFilterOptions: function() {
@@ -37,5 +47,33 @@ GetContext('MonsterApp.view.monster').MonsterFilterView = Backbone.View.extend({
                 '<option value=' + key + '>'+value+'</option>'
             );
         });
+    },
+
+    _onFilterOptionChange:function(){
+        var self = this;
+
+        var filter = undefined;
+        $("select option:selected").each(function () {
+
+            filter = $(this).text();
+        });
+
+        this._createListNav(filter);
+    },
+
+    _createListNav: function(filter){
+
+        switch(filter){
+
+            case this._filterListEnum.CR:
+                break;
+            case this._filterListEnum.name:
+                break;
+            case this._filterListEnum.environment:
+                break;
+        }
+        self.$('#filteredList').listnav();
+
     }
+
 })
