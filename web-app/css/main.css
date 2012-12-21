@@ -8,127 +8,6 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.1;
 }
 
-/* BASE LAYOUT */
-
-/*html {*/
-	/*background-color: #ddd;*/
-	/*background-image: -moz-linear-gradient(center top, #aaa, #ddd);*/
-	/*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));*/
-	/*background-image: linear-gradient(top, #aaa, #ddd);*/
-	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');*/
-	/*background-repeat: no-repeat;*/
-	/*height: 100%;*/
-	 /*change the box model to exclude the padding from the calculation of 100% height (IE8+)*/
-	/*-webkit-box-sizing: border-box;*/
-	   /*-moz-box-sizing: border-box;*/
-	        /*box-sizing: border-box;*/
-/*}*/
-
-/*html.no-cssgradients {*/
-	/*background-color: #aaa;*/
-/*}*/
-
-/*.ie6 html {*/
-	/*height: 100%;*/
-/*}*/
-
-/*html * {*/
-	/*margin: 0;*/
-/*}*/
-
-/*body {*/
-	/*background: #ffffff;*/
-	/*color: #333333;*/
-	/*margin: 0 auto;*/
-	/*max-width: 960px;*/
-	/*overflow-x: hidden;  prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide*/
-	   /*-moz-box-shadow: 0 0 0.3em #255b17;*/
-	/*-webkit-box-shadow: 0 0 0.3em #255b17;*/
-	        /*box-shadow: 0 0 0.3em #255b17;*/
-/*}*/
-
-/* replace with .no-boxshadow body if you have modernizr available */
-/*.ie6 body,*/
-/*.ie7 body,*/
-/*.ie8 body {*/
-	/*border-color: #255b17;*/
-	/*border-style: solid;*/
-	/*border-width: 0 1px;*/
-/*}*/
-
-/*.ie6 body {*/
-	/*height: 100%;*/
-/*}*/
-
-/*a:link, a:visited, a:hover {*/
-	/*color: #48802c;*/
-/*}*/
-
-/*a:hover, a:active {*/
-	/*outline: none; *//* prevents outline in webkit on active links but retains it for tab focus */
-/*}*/
-
-/*h1 {*/
-	/*color: #48802c;*/
-	/*font-weight: normal;*/
-	/*font-size: 1.25em;*/
-	/*margin: 0.8em 0 0.3em 0;*/
-/*}*/
-
-/*ul {*/
-	/*padding: 0;*/
-/*}*/
-
-/*img {*/
-	/*border: 0;*/
-/*}*/
-
-/* GENERAL */
-
-/*label {*/
-	/*cursor: pointer;*/
-	/*display: inline-block;*/
-	/*margin: 0 0.25em 0 0;*/
-/*}*/
-
-/*input, select, textarea {*/
-	/*background-color: #fcfcfc;*/
-	/*border: 1px solid #cccccc;*/
-	/*font-size: 1em;*/
-	/*padding: 0.2em 0.4em;*/
-/*}*/
-
-/*select {*/
-	/*padding: 0.2em 0.2em 0.2em 0;*/
-/*}*/
-
-/*select[multiple] {*/
-	/*vertical-align: top;*/
-/*}*/
-
-/*textarea {*/
-	/*width: 250px;*/
-	/*height: 150px;*/
-	/*overflow: auto; *//* IE always renders vertical scrollbar without this */
-	/*vertical-align: top;*/
-/*}*/
-
-/*input[type=checkbox], input[type=radio] {*/
-	/*background-color: transparent;*/
-	/*border: 0;*/
-	/*padding: 0;*/
-/*}*/
-
-/*input:focus, select:focus, textarea:focus {*/
-	/*background-color: #ffffff;*/
-	/*border: 1px solid #eeeeee;*/
-	/*outline: 0;*/
-	   /*-moz-box-shadow: 0 0 0.5em #ffffff;*/
-	/*-webkit-box-shadow: 0 0 0.5em #ffffff;*/
-	        /*box-shadow: 0 0 0.5em #ffffff;*/
-/*}*/
-
-
 /* EMBEDDED PROPERTIES */
 
 fieldset.embedded {
@@ -219,128 +98,7 @@ input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
 	        box-shadow: 0 0 0.5em #ffaaaa;
 }
 
-/* TABLES */
 
-/*table {*/
-	/*border-top: 1px solid #DFDFDF;*/
-	/*border-collapse: collapse;*/
-	/*width: 100%;*/
-	/*margin-bottom: 1em;*/
-/*}*/
-
-/*tr {*/
-	/*border: 0;*/
-/*}*/
-
-/*tr>td:first-child, tr>th:first-child {*/
-	/*padding-left: 1.25em;*/
-/*}*/
-
-/*tr>td:last-child, tr>th:last-child {*/
-	/*padding-right: 1.25em;*/
-/*}*/
-
-/*td, th {*/
-	/*line-height: 1.5em;*/
-	/*padding: 0.5em 0.6em;*/
-	/*text-align: left;*/
-	/*vertical-align: top;*/
-/*}*/
-
-/*th {*/
-	/*background-color: #efefef;*/
-	/*background-image: -moz-linear-gradient(top, #ffffff, #eaeaea);*/
-	/*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));*/
-	    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');*/
-	/*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";*/
-	/*color: #666666;*/
-	/*font-weight: bold;*/
-	/*line-height: 1.7em;*/
-	/*padding: 0.2em 0.6em;*/
-/*}*/
-
-/*thead th {*/
-	/*white-space: nowrap;*/
-/*}*/
-
-/*th a {*/
-	/*display: block;*/
-	/*text-decoration: none;*/
-/*}*/
-
-/*th a:link, th a:visited {*/
-	/*color: #666666;*/
-/*}*/
-
-/*th a:hover, th a:focus {*/
-	/*color: #333333;*/
-/*}*/
-
-/*th.sortable a {*/
-	/*background-position: right;*/
-	/*background-repeat: no-repeat;*/
-	/*padding-right: 1.1em;*/
-/*}*/
-
-/*th.asc a {*/
-	/*background-image: url(../images/skin/sorted_asc.gif);*/
-/*}*/
-
-/*th.desc a {*/
-	/*background-image: url(../images/skin/sorted_desc.gif);*/
-/*}*/
-
-/*.odd {*/
-	/*background: #f7f7f7;*/
-/*}*/
-
-/*.even {*/
-	/*background: #ffffff;*/
-/*}*/
-
-/*th:hover, tr:hover {*/
-	/*background: #E1F2B6;*/
-/*}*/
-
-/* PAGINATION */
-
-/*.pagination {*/
-	/*border-top: 0;*/
-	/*margin: 0;*/
-	/*padding: 0.3em 0.2em;*/
-	/*text-align: center;*/
-	   /*-moz-box-shadow: 0 0 3px 1px #AAAAAA;*/
-	/*-webkit-box-shadow: 0 0 3px 1px #AAAAAA;*/
-	        /*box-shadow: 0 0 3px 1px #AAAAAA;*/
-	/*background-color: #EFEFEF;*/
-/*}*/
-
-/*.pagination a,*/
-/*.pagination .currentStep {*/
-	/*color: #666666;*/
-	/*display: inline-block;*/
-	/*margin: 0 0.1em;*/
-	/*padding: 0.25em 0.7em;*/
-	/*text-decoration: none;*/
-	   /*-moz-border-radius: 0.3em;*/
-	/*-webkit-border-radius: 0.3em;*/
-	        /*border-radius: 0.3em;*/
-/*}*/
-
-/*.pagination a:hover, .pagination a:focus,*/
-/*.pagination .currentStep {*/
-	/*background-color: #999999;*/
-	/*color: #ffffff;*/
-	/*outline: none;*/
-	/*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);*/
-/*}*/
-
-/*.no-borderradius .pagination a:hover, .no-borderradius .pagination a:focus,*/
-/*.no-borderradius .pagination .currentStep {*/
-	/*background-color: transparent;*/
-	/*color: #444444;*/
-	/*text-decoration: underline;*/
-/*}*/
 
 /* ACTION BUTTONS */
 
@@ -421,7 +179,7 @@ a.skip {
 /* MENU */
 
 body {
-    background-color:#333333;
+    background-color:#DADADA;
     margin:0;
 }
 
@@ -437,14 +195,14 @@ a:focus {
 
 /* Menu Body */
 ul#menu {
-    width:80%;
+    width:90%;
     height:102px;
     background:url(../images/bg.png) repeat-x;
     list-style:none;
     margin:0;
     padding:0;
     padding-top:0px;
-    padding-left:20%;
+    padding-left:10%;
 }
 
 /* Float LI Elements - horizontal display */

@@ -1,20 +1,22 @@
 GetContext('MonsterApp.controller').MonsterController = Backbone.Model.extend({
     _headerView: undefined,
+    _mainView: undefined,
 
     initialize: function() {
     },
 
     displayMonsters: function() {
-        this._displayHeaderView();
         $('body').empty();
-        var view = new MonsterApp.view.monster.MonsterView({collection: MonsterApp.session.get('monsterCollection')});
-        $('body').append(view.render().el);
+        this._displayHeaderView();
+        this._mainView = new MonsterApp.view.monster.MonsterView({collection: MonsterApp.session.get('monsterCollection')});
+        $('body').append(this._mainView.render().el);
     },
 
     displayMonsterFilters: function() {
         $('body').empty();
-        var view = new MonsterApp.view.monster.MonsterFilterView({collection: MonsterApp.session.get('monsterCollection')});
-        $('body').append(view.render().el);
+        this._displayHeaderView();
+        this._mainView = new MonsterApp.view.monster.MonsterFilterView({collection: MonsterApp.session.get('monsterCollection')});
+        $('body').append(this._mainView.render().el);
     },
     monsterSelected: function() {
         Backbone.history.navigate('info');
@@ -22,7 +24,9 @@ GetContext('MonsterApp.controller').MonsterController = Backbone.Model.extend({
 
     _displayHeaderView: function() {
         if (this._headerView === undefined) {
-            //create and display headerView
+            this._headerView = new MonsterApp.view.monster.HeaderMenuView();
         }
+
+        $('body').append(this._headerView.render().el);
     }
 });
