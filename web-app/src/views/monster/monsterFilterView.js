@@ -1,9 +1,14 @@
 GetContext('MonsterApp.view.monster').MonsterFilterView = Backbone.View.extend({
 
     _filterListEnum: undefined,
+    _filter1:undefined,
+    _filter2:undefined,
+
 
     events:{
-        'change #filters':'_onFilterOptionChange'
+        'change #filters':'_onFilterOptionChange',
+        'click #filteredList':'_onFilteredListClicked',
+        'click #filteredList2':'_onFilteredList2Clicked'
     },
 
     initialize: function() {
@@ -13,7 +18,7 @@ GetContext('MonsterApp.view.monster').MonsterFilterView = Backbone.View.extend({
         }
 
         this._filterListEnum ={
-            'CR': 'Challenge Rating',
+            'challengeRating': 'Challenge Rating',
             'name': 'Name',
             'environment':'Environment'
         }
@@ -32,7 +37,7 @@ GetContext('MonsterApp.view.monster').MonsterFilterView = Backbone.View.extend({
     _collectionReset: function() {
         var self = this;
 
-        this.collection.each(function(model) {
+        this.collection.each(function(model, filter) {
             self.$('#filteredList').append(
                 '<li value=' + model.get('id') + '>'+model.get('name')+'</li>'
             );
@@ -53,27 +58,95 @@ GetContext('MonsterApp.view.monster').MonsterFilterView = Backbone.View.extend({
         var self = this;
 
         var filter = undefined;
-        $("select option:selected").each(function () {
+        _.each($('#filters option:selected'), function(filter) {
 
-            filter = $(this).text();
+            if(filter!== null)
+            {
+                self._filter1 = filter.value;
+                //self.$('#filteredList-nav').empty();
+                self.$('#filteredList').empty();
+                self._filterCollection(self._filter1);
+                //self.$('#filteredList').listnav();
+            }
+
         });
 
-        this._createListNav(filter);
     },
 
-    _createListNav: function(filter){
+    _filterCollection: function(filter){
+        var self = this;
 
-        switch(filter){
+        this.collection.each(function(model) {
+            self.$('#filteredList').append(
+                '<option value=' + model.get('id') + '>'+model.get(filter)+'</option>'
+            );
 
-            case this._filterListEnum.CR:
-                break;
-            case this._filterListEnum.name:
-                break;
-            case this._filterListEnum.environment:
-                break;
+        });
+    },
+
+    _onFilteredListClicked:function(){
+        var self = this;
+
+        var filter = undefined;
+        _.each($('#filteredList option:selected'), function(filter) {
+
+            if(filter!== null)
+            {
+                self.$('#filteredList2').empty();
+                self._fillFilteredList2Collection(filter);
+
+            }
+
+        });
+
+        if(this._filter1 === 'name')
+        {
+            self._displayMonsterInfo();
         }
-        self.$('#filteredList').listnav();
+    },
+
+    _onFilteredList2Clicked: function(){
+        var self = this;
+
+        var filter = undefined;
+        _.each($('#filteredList2 option:selected'), function(filter) {
+
+            if(filter!== null)
+            {
+                self._displayMonsterInfo();
+            }
+        });
+    },
+
+    _fillFilteredList2Collection:function(filter){
+        var filteredCollection = new Backbone.Collection();
+
+        if(this._filter1 === 'challengeRating')
+        {
+            filteredCollection = this.collection.where({challengeRating:parseInt(filter.text)})
+        }
+        else if(this._filter1 === 'environment')
+        {
+            filteredCollection = this.collection.where({environment:filter.text})
+        }
+
+        _.each(filteredCollection, function(model) {
+            self.$('#filteredList2').append(
+                '<option value=' + model.get('id') + '>'+model.get('name')+'</option>'
+            );
+
+        });
+    },
+
+    _displayMonsterInfo: function(){
+        var self = this;
+        var monster = undefined;
+        $("select option:selected").each(function () {
+
+            monster = self.collection.get($(this).val())
+        });
+
+        self.$('#info').html(monster.get('fullText'));
 
     }
-
 })

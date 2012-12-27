@@ -12,13 +12,13 @@ hibernate {
 environments {
     development {
         dataSource {
-            url = "jdbc:sqlserver://opdbsql-dev.ident.com\\opddev2;database=GryphonJason"
-            username = "GryphonApp"
-            password = "letmein"
+//            url = "jdbc:sqlserver://opdbsql-dev.ident.com\\opddev2;database=GryphonJason"
+//            username = "GryphonApp"
+//            password = "letmein"
 
-//            url = "jdbc:sqlserver://localhost:1433;databaseName=Starfall"
-//            username = "bender"
-//            password = "bender"
+            url = "jdbc:sqlserver://localhost:1433;databaseName=Starfall"
+            username = "bender"
+            password = "bender"
         }
     }
     test {

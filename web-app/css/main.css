@@ -256,3 +256,11 @@ ul#menu li a.filters:hover {
     background-position:-159px -81px;
 }
 
+.filterOptions{
+    width:20%;
+    float:left;
+}
+select{
+    width:100%;
+    display: inline-block;
+}
